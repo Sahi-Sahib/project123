@@ -1,0 +1,40 @@
+<GoldenLayout>:
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: 0.83, 0.69, 0.22, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    MDLabel:
+        text: "Welcome"
+
+    MDTextField:
+        hint_text: "Enter Weight"
+        id: weight_input
+
+    MDTextField:
+        hint_text: "Enter Rate"
+        id: rate_input
+
+    MDRectangleFlatButton:
+        text: "Calculate"
+        on_release: root.calculate()
+
+    MDLabel:
+        id: result_label
+
+<MDLabel>:
+    size_hint_y: None
+    height: self.texture_size[1]
+    font_size: "20sp"
+    halign: 'center'
+
+<MDTextField>:
+    size_hint_y: None
+    height: "40dp"
+
+<MDRectangleFlatButton>:
+    size_hint_y: None
+    height: "40dp"
